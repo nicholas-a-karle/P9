@@ -1,0 +1,35 @@
+//calculates the derivative for a described polynominal at a given x
+
+
+
+//calculate value of the polynomial at x
+class Main {
+
+    
+
+    function void main() {
+        var int p, n, c, k;
+        let p = Keyboard.readInt("How many people are there? ");
+        let n = Keyboard.readInt("How many positions are there? ");
+        let c = 1;
+        let k = p;
+        while (k > 0) {
+            let c = c * k;
+            let k = k -1;
+        }
+        let k = n;
+        while (k > 0) {
+            let c = c / k;
+            let k = k -1;
+        }
+        let k = p - n;
+        while (k > 0) {
+            let c = c / k;
+            let k = k -1;
+        }
+        do Output.printString("There are...");
+        do Output.printInt(c);
+        do Output.printString(" ...possible combinations of committees.");
+        return;
+    }
+}
